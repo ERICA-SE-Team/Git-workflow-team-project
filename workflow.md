@@ -16,6 +16,34 @@
 + 소규모의 팀에서는 팀원 모두가 프로젝트 관리자가 되어 중앙 원격 저장소를 관리할 수 있다.
 3. `아주 큰 규모의 분산된 팀에서도 안전하게 협업하기에 좋은 협업 방법`이다.
 4. `오픈소스 프로젝트에서 많이 사용하는 방식`이다.
+----
+## 💻 Git 워크플로우 진행 방식 (Forking flow)
+----
+
+#### 1. 프로젝트 팀 전체가 사용하는 중앙 원격 repository, 개인이 사용하는 개인 원격 repository, 개인이 사용하는 개인 로컬 repository를 아래의 이미지와 같이 구성함.
+![Alt text](http://alldpublic.kr/SDP_Team/1.jpeg)
+
+#### 2. 중앙 원격 저장소를 포크(fork)해서 자신만의 원격 저장소를 만든다.
+ •중앙 원격 저장소를 복제한 저장소는 개인의 공개 저장소(remote repository) 역할을 함.<br/>
+ •다른 개발자는 자신의 원격 저장소에 푸시할 수 없음(내려 받는 것은 가능)
+![Alt text](http://alldpublic.kr/SDP_Team/2.jpeg)
+
+#### 3. 프로젝트 참여자는 git clone 명령으로 로컬 저장소를 만든다.
+```
+git clone [개인 원격 remote 저장소 주소]
+```
+![Alt text](http://alldpublic.kr/SDP_Team/3.jpeg)
+
+#### 4. 로컬 저장소와 중앙 원격 저장소, 개인 원격 저장소를 연결한다.
+[로컬 저장소 - 중앙 원격 저장소 연결]
+```
+$ git remote add center [중앙 원격 remote 저장소 주소]
+```
+[로컬 저장소 - 개인 원격 저장소 연결]
+```
+$ git remote add origin [개인 원격 remote 저장소 주소]
+```
+![Alt text](http://alldpublic.kr/SDP_Team/4.jpeg)
 
 #### 5. 새로운 기능 개발을 위해 격리된 branch를 만든다.
 ```
