@@ -69,7 +69,21 @@ $ git commit -m "Write commit message" # local 작업폴더에 history 하나를
 #### 7. 프로젝트 관리자(소규모 팀에서는 모두가 관리자가 될 수 있음)에게 자신의 기여분을 반영해 달라는 풀 리퀘스트를 던진다.
 ![Alt text](http://alldpublic.kr/SDP_Team/8.jpeg) 
 
+#### 8. Pull requests를 merge 하기 위한 회의(코드리뷰)를 진행한다.
+![Alt text](http://alldpublic.kr/SDP_Team/9.jpeg) 
 
+#### 9. 회의 후 프로젝트 관리자는 merge를 진행한다.
+![Alt text](http://alldpublic.kr/SDP_Team/10.jpeg) 
+
+#### 10. 중앙 원격 저장소와 자신의 로컬 저장소를 동기화하기 위해 로컬 저장소의 branch를 master branch로 이동한다.
+![Alt text](http://alldpublic.kr/SDP_Team/11.jpeg) 
+
+#### 11. 중앙 원격 저장소의 코드 베이스에 새로운 커밋이 있다면 다음과 같이 가져온다.
+```
+$ git pull center master
+```
+![Alt text](http://alldpublic.kr/SDP_Team/12.jpeg) 
+-----  
 ### ✅ Forking workflow의 장단점
 1. 장점
 개인 원격 저장소에서 발생한 업데이트는 중앙 원격 저장소에 영향을 주지 않으므로, 다양한 시도를 하기에 좋다.
